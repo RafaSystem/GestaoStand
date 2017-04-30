@@ -1,0 +1,43 @@
+*{ margin: 0; padding: 0; }
+
+body, header, nav, main, footer { width:80%; margin:auto; background-color: white;}
+
+body{
+	background-color: #505050;
+}
+
+header {
+	padding-top: 3%;
+	padding-bottom: 2%;
+	display: table;
+	border: 1px solid #898989;
+	border-top: none;
+}
+
+.cel50{
+	display: table-cell;
+	width: 50%;
+}
+
+.logotipo { padding-left:5%; }
+.logotipo a { font-size: 24px; text-decoration: none; font-weight: bold; color: #505050; }
+.logotipo a:HOVER { color: #898989; }
+
+.headerMenu { text-align: right;}
+.headerMenu ul li {	color: #505050; display: inline; margin-right: 5%; }
+.headerMenu ul li a { font-size: 14px; text-decoration: none; color: #505050; }
+.headerMenu ul li a:HOVER { color: #898989; }
+
+nav { display: table;  margin-top: 2%; border: 1px solid #898989; }
+
+.navMenu { display: table-cell; text-align: center; padding-top: 1%; padding-bottom: 1%; }
+.navMenu ul li { display: inline; margin-right: 5%;	margin-left: 5%; }
+.navMenu ul li a { font-size: 18px; text-decoration: none;  color: #404258; }
+.navMenu ul li a:HOVER { color: #373f87; }
+
+main { display: table; margin-top: 2%; }
+.mainContainer { display: table-cell; width: 100%; }
+
+footer { background: none; display: table; margin-top: 5%; margin-bottom: 1%; }
+footer p { display: table-cell; text-align: center; color: #eee; }
+footer p a { text-decoration: none; color: #eee; }

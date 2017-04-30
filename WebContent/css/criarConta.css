@@ -1,0 +1,4 @@
+.formCriarConta { display: table-cell; }
+
+.formCriarConta form { display: table; }
+.formCriarConta form lable { display: table-cell; }

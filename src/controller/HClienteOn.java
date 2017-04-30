@@ -108,7 +108,7 @@ public class HClienteOn extends HttpServlet {
 				//Fazer o Cookie expirar em 30 minutos
 				loginCookie.setMaxAge(30*60);
 				response.addCookie(loginCookie);
-				response.sendRedirect("index.jsp?Sucess");
+				response.sendRedirect("detalhesCliente.jsp");
 			
 			}else{
 				response.sendRedirect("index.jsp?er=inLog");

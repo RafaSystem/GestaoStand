@@ -16,9 +16,14 @@
 		Cookie[] cookies = request.getCookies();
 		
 		if(cookies != null){
-			response.sendRedirect("detalhesCliente.jsp");
+			for(Cookie cookie : cookies){
+				if(cookie.getName().equals("user")){
+					userName = cookie.getValue();
+				}
+			}
 		}
-	
+		
+		if(userName != null) response.sendRedirect("detalhesCliente.jsp");
 	%>
 
 	<header>

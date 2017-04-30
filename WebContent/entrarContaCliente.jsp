@@ -18,9 +18,9 @@
 		</div>
 		<div class="cel50 headerMenu">
 			<ul>
-				<li><a href="#">Login</a></li>
+				<li><a href="entrarContaCliente.jsp">Entrar</a></li>
 				<li>/</li>
-				<li><a href="#">Register</a></li>
+				<li><a href="criarContaCliente.jsp">Registar</a></li>
 			</ul>
 		</div>
 	</header>

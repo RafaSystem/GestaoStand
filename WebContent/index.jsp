@@ -11,6 +11,16 @@
 </head>
 <body>
 
+	<%
+		String userName = null;
+		Cookie[] cookies = request.getCookies();
+		
+		if(cookies != null){
+			response.sendRedirect("detalhesCliente.jsp");
+		}
+	
+	%>
+
 	<header>
 		<div class="cel50 logotipo">
 			<a href="./">LOGOTIPO</a>

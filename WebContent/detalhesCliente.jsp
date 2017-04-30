@@ -12,15 +12,30 @@
 </head>
 <body>
 
+	<%
+		String userName = null;
+		Cookie[] cookies = request.getCookies();
+		
+		if(cookies != null){
+			for(Cookie cookie : cookies){
+				if(cookie.getName().equals("user")){
+					userName = cookie.getValue();
+				}
+			}
+		}
+		
+		if(userName == null) response.sendRedirect("entrarContaCliente.jsp");
+	%>
+
 	<header>
 		<div class="cel50 logotipo">
 			<a href="./">LOGOTIPO</a>
 		</div>
 		<div class="cel50 headerMenu">
 			<ul>
-				<li><a href="#">Login</a></li>
+				<li><a href="#"><%=userName %></a></li>
 				<li>/</li>
-				<li><a href="#">Register</a></li>
+				<li><a href="HLogout">Logout</a></li>
 			</ul>
 		</div>
 	</header>

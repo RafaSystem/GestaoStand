@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -99,7 +100,16 @@ public class HClienteOn extends HttpServlet {
 			String checkName = request.getParameter("username");
 			String checkPass = request.getParameter("password");
 			if(checkUserLog(checkName, checkPass) == true){
-				request.getRequestDispatcher("detalhesCliente.jsp").forward(request, response);
+				//request.getRequestDispatcher("detalhesCliente.jsp").forward(request, response);
+				
+				//Cookie Sessions
+				Cookie loginCookie = new Cookie("user", checkName);
+				
+				//Fazer o Cookie expirar em 30 minutos
+				loginCookie.setMaxAge(30*60);
+				response.addCookie(loginCookie);
+				response.sendRedirect("index.jsp?Sucess");
+			
 			}else{
 				response.sendRedirect("index.jsp?er=inLog");
 			}
